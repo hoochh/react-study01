@@ -10,22 +10,27 @@ function Potato(props) {
   return <h3>I love potato</h3>;
 }
 
+//리액트는 시작 : index.html > index.js에서 reactDOM 생성
+// > index.html에서 id가 root인 태그를 찾음 > 생성한 reactDOM(가상DOM)을 검색한 태그(root)에 붙여넣는다
+// > 화면 생성 > index.js에서 App.js 호출
+
 function SweetPotato({ data }) {
   // console.log(props);
-  // const { data } = props;
-  // let data = props.data;
 
   // 1번 방식 : object 타입의 변수 props가 가지고 있는 key 명을 사용하여 출력
   //return <h3>I love {props.data}</h3>;
 
   // 2번 방식 : ES5 버전의 객체 분해 할당을 통해 object 타입의 변수 porps의 key명을 사용하여
   // 새로운 변수에 데이터를 할당하고, jsx 부분에서 해당 변수를 사용
+  // let data = props.data;
 
   // 3번 방식 : ES6 버전의 객체 분해 할당을 통해서 object 타입의 변수 props의 key명을
   //새로운 변수명으로 사용하고 해당 key의 값을 새 변수의 값으로 할당하여 사용
+  // const { data } = props;
 
   // 4번 방식 : ES5 버전의 객체 분해 할당을 통해서 매개변수 부분에 바로 새로운 {변수명}을 사용하고
   // jsx 부분에 해당 변수를 사용하여 출력
+  //function SweetPotato({ data }) {}
   return <h3>I love {data}</h3>;
 }
 
